@@ -1,0 +1,37 @@
+//Parameterized and Non Parameterized
+#include<bits/stdc++.h>
+using namespace std;
+class Human{
+private:
+    int age;
+    string name;
+public:
+    Human(){
+        name="Ajju";
+        age=18;
+    }
+    Human(string word){
+        name =word;
+        age=0;
+    }
+    Human(string word, int val) {
+        name=word;
+        age=val;
+    }
+    Human (int val)
+    {
+        name="No word";
+        age=val;
+    }
+    void display(){
+        cout<<"Hi i am "<< name<< " My age is "<<age;
+    }
+};
+
+int main()
+{
+    //Human aa;
+    Human aa("ajayu",18);
+    aa.display();
+    return 0;
+}
