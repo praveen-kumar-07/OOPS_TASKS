@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+class Human
+{
+private:
+	int age;
+	string name;
+public:
+	void SetData(int val,string word){
+		age=val;
+		name=word;
+	}
+	void GetData(){
+		cout<<"I'am"<<" "<<name<<" "<<"with age"<<" "<<age<<endl;
+	}
+	
+};
+int main()
+{
+	Human praveen;
+	int x; 
+	string y;
+	cin>>x;
+	cin>>y;
+	praveen.SetData(x,y);
+	praveen.GetData();
+	return 0;
+}
