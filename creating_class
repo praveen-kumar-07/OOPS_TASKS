@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+class Humanbeing{
+public:
+	string name;
+	void Display(){
+		cout<<name<<endl;
+	}
+};
+int main(){
+	Humanbeing praveen;
+	cin>>praveen.name;
+	praveen.Display();
+
+	Humanbeing *kumar = new Humanbeing();
+	cin>>kumar->name;
+	kumar->Display();
+	return 0;
+}
