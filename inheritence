@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+class Human{
+public:
+	int age;
+	string name;
+	void setage(int val){
+		age=val;
+	}
+	void setname(string peru){
+		name=peru;
+	}
+};
+class Student :public Human
+{
+public:
+	int id;
+	void setid(int val){
+		id=val;
+	}
+	void display(){
+		cout<<" "<<name<<" "<<id<<endl;
+	}
+};
+int main(){
+	Student praveen;
+	praveen.id=123;
+	praveen.name="praveen";
+	praveen.setage(18);
+	praveen.display();
+	return 0;
+}
