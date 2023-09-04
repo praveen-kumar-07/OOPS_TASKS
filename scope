@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+class Persion{
+public:
+	int age;
+	string name;
+public:
+	void SetAge(int val){
+		age=val;
+	}
+	void SetName(string word){
+		name=word;
+	}
+};
+class Student : protected Persion
+{
+public:
+	Persion::SetName;
+	Persion::SetAge;
+	int id;
+	string college;
+	void SetId(int data){
+		id=data;
+	}
+	void SetCollege(string name){
+		college=name;
+	}
+	void Display(){
+		cout<<"my name is "<<name<<" with an age "<<age<<" studying in "<<college<<" with id "<<id<<endl;
+	}
+	
+};
+
+int main(){
+	Student Praveen;
+	Praveen.SetAge(28);
+	Praveen.SetName("Praveen");
+	Praveen.SetCollege("AEC");
+	Praveen.SetId(1778787);
+	Praveen.Display();
+}
