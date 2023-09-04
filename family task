@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+class Family
+{
+public:
+	int members;
+	string Father;
+public:
+void SetMem(int val){
+	members=val;
+}	
+void SetFather(string name){
+	Father=name;
+}
+};
+class Remaining : public Family
+{
+
+private:
+	string Mother;
+	string Brother;
+public:
+void SetMother(string mname){
+	Mother=mname;
+}
+void SetBrother(string bname){
+	Brother=bname;
+}
+void Display(){
+	cout<<"Praveen's Family"<<endl;
+	cout<<"Family Memebers: "<<members<<endl;
+	cout<<Father<<" "<<Mother<<" "<<Brother<<endl;
+}
+};
+int main(){
+	Remaining Praveen;
+	Praveen.SetMem(4);
+	Praveen.SetFather("Sekhar");
+	Praveen.SetMother("Annapurna");
+	Praveen.SetBrother("Pavan");
+	Praveen.Display();
+}
