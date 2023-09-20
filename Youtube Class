@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+class YouTube{
+public:
+	string Name,ChannelCreator;
+	long SubscribesCount;
+	vector<string>Titles;
+	YouTube(string name, string ownerName,long subscribescount){
+		Name = name;
+		ChannelCreator = ownerName;
+		SubscribesCount = subscribescount;
+	}
+	void subs(){
+		SubscribesCount++;
+	}
+	void CreateChannel(){
+		cout << "Channel name : "<<Name << "\n";
+		cout << "Channel Creator : " << ChannelCreator << "\n";
+		cout << "SubscribesCount : " << SubscribesCount << "\n";
+		int i;
+		for(i=0;i<Titles.size();i++){
+			cout<<i+1<<" video:"<<Titles[i]<<"\n";
+		}
+
+	}
+};
+
+int main(){
+	string ChannelName,Name;
+	long Subscribers;
+	cin>>ChannelName>>Name;
+	cin>>Subscribers;
+	YouTube FoodVlogs(ChannelName,Name,Subscribers);
+	FoodVlogs.subs();
+	FoodVlogs.Titles.push_back("KFC");
+	FoodVlogs.Titles.push_back("McDonalds");
+	FoodVlogs.CreateChannel();
+	
+
+}
